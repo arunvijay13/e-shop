@@ -1,78 +1,175 @@
-*{
-	padding:0;
-	margin : 0;
-	box-sizing: border-box;
-}
-.header{
-	text-align: center;
-	margin:10px;
-}
-.balance{
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	margin: 10px;
-}
-.calculation{
-	display: flex;
-	justify-content: center;
-	font-size: 20px;
-}
-.income,.expense{
-	margin: 10px;
-	padding: 5px;
-}
-.add{
-	text-align: center;
-	margin: 10px;
-}
-form{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.btn{
-	padding: 10px;
-	background: red;
-	color: white;
-	font-weight: bold;
-	outline: none;
-	border-radius: 10px;
+.navicon{
+	margin-left: 40px;
 	cursor: pointer;
 }
-input{
-	padding: 5px;
-	margin: 10px;
+.icon:hover{
+	color:blue !important;
 }
-.history{
+.search{
+	min-width: 50rem; 
+	padding: 5px;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	flex-direction: column;
 }
-.transaction{
+.inputbar{
+	padding: 5px 10px;
+	width: 40rem;
+	outline: none;
+}
+
+/* product design */ 
+
+.image{
+	width:200px;
+	height:200px;
+	transition: all 1s;
+}
+.image:hover{
+	transform: scale(1.07);
+}
+.card{
+	position: relative;
+	overflow: hidden;
+	box-shadow: 1px 0px 3px 0px #000;
+}
+.cardtitle{
+	background: black;
+	color: white;
+	font-style: italic;
+}
+.carditem:hover .cardtitle{
+	background: blue;
+}
+.price{ 
+	font-weight: bold ;
+	font-size: 20px;
+	font-style: italic;
+	position: absolute;
+}
+.price:hover{
+	background: white !important;
+}
+.addtocart{
+	border: none;
+	color: white;
+	background: transparent;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(100%);
+	transition: all 1s;
+}
+.card:hover .addtocart{
+	transform: translate(0);
+}
+.incart{
+	border: none;
+	color: white;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.price{
+	color: white;
+	transition: all 1s;
+}
+.card:hover .price{
+	transform: scale(1.07);
+}
+/* end of design */
+
+/* footer design */
+.footer{
+	background: black;
+	position: relative;
+}
+.list{
+	list-style-type: none;
+	color: white;
+	padding-left: 0;
+}
+.head{
+	margin-top:50px;
+	margin-bottom:20px;
+}
+.address{
+	color: white;
+}
+.list li,.address{
+	font-size: 12px;
+}
+/* end of footer design */
+
+/* design of detailed product */
+.pricedetail{
+	font-size: 25px;
+}
+.para{
+	font-size: 15px;
+	font-weight: bold;
+}
+.pic{
+	transition: 1s all;
+}
+.pic:hover{
+	transform: scale(1.09);
+}
+/* end of detailed product */
+
+/* design of cart */
+.cartname{
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+.remove{
+	cursor: pointer;
+}
+.calculation{
+	font-size: 25px !important;
+}
+.size{
+	font-size: 20px !important;
+}
+/* end of design of cart */
+
+/* login */
+.error{
+	color: red;
+}
+.email,.password{
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 300px;
+	margin: 10px auto;
+}
+input{
+	padding: 5px 20px;
+	border-radius: 10px;
+	outline: none; 
+}
+/* end of login */
+
+/* creditcart */
+.creditcard{
+	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	background: lightblue;
-	margin: 10px;
-	width: 50%;	
-	padding: 10px;
-	font-size: 20px;
-	border-right: 5px solid;
+	margin: 20px;
 }
-.close{
-	background: red;
-	padding: 5px;
+.creditcard input{
 	margin: 5px;
-	outline: none;
-	border: none;
-	display: none;
+	width: 300px;
 }
-.transaction:hover .close{
-	display: inline;
+.pay{
+	width: 300px;
 }
+/* end of creditcard */
 
 
-
-
+@media screen and (max-width: 600px){
+	.cartname{
+		display: none;
+	}
+}
