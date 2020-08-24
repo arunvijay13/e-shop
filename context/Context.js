@@ -1,7 +1,5 @@
 import React,{useState,createContext} from 'react'
 
-import phone from '../work/Phone.js'
-import laptop from '../work/Laptop.js'
 import tv from '../work/Tv.js'
 
 export const ShopContext = createContext()
